@@ -1,17 +1,39 @@
-.navbar {
-    background-color: rgb(229, 229, 240);
+:host {
     border-radius: 15px;
+    box-sizing: border-box;
     border: 1px solid rgb(27, 189, 218);
+    background-color: rgb(229, 229, 240);
+
+    align-content: center;
+    align-items: center;
 }
 
 ul {
+    display: flex;
     list-style: none;
+    
+    height: inherit;
+    width: inherit;
+    min-height: inherit;
+
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 }
 
+.home{
+    order: 1;
+    flex-grow: 2;
+}
 li {
     display: inline-block;
+    order: 2;
+    flex-grow: 1;
 }
 
 a {
-    padding-right: 20px;
+    
 }

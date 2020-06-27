@@ -1,0 +1,26 @@
+<div class="data">
+    <div class="infoblock">{{ this.myIngredient.icon }}</div>
+    <div class="infoblock">{{ this.myIngredient.bond }}</div>
+    <div class="infoblock">{{ this.myIngredient.numBonds }}</div>
+</div>
+
+<div class="data">
+    <div class="bond-desc">
+        <div class="bond">{{ this.myIngredient.effect[0].bondType }}</div>
+        <div class="bond">{{ this.myIngredient.effect[1].bondType }}</div>
+        <div class="bond">{{ this.myIngredient.effect[2].bondType }}</div>
+    </div>
+    <div class="desc-block">
+        <div class="description"><div class="desc-content">{{ this.myIngredient.effect[0].myDesc }} </div></div>
+        <div class="description"><div cdkDropList #box1="cdkDropList" class="desc-content"></div></div>
+        <div class="description">
+            <div 
+                class="desc-content"
+                #ingredient="cdkDropList"
+                (cdkDropListDropped)="drop($event)" 
+                cdkDropList>
+
+            </div>
+        </div>
+    </div>
+</div>

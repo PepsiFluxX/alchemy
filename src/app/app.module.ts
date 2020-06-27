@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { MixingTableComponent } from './alchemy-station/mixing-table/mixing-tabl
 import { DisplayAreaComponent } from './alchemy-station/display-area/display-area.component';
 import { ControlPanelComponent } from './alchemy-station/control-panel/control-panel.component';
 import { FormsModule } from '@angular/forms';
+import { IngredientReceptacleComponent } from './alchemy-station/mixing-table/ingredient-receptacle/ingredient-receptacle.component';
+import { IngredientInfoCardComponent } from './alchemy-station/ingredient-info-card/ingredient-info-card.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,15 @@ import { FormsModule } from '@angular/forms';
     IngredientBinComponent,
     MixingTableComponent,
     DisplayAreaComponent,
-    ControlPanelComponent
+    ControlPanelComponent,
+    IngredientReceptacleComponent,
+    IngredientInfoCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

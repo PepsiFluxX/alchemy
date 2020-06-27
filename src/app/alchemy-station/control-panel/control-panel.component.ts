@@ -10,6 +10,15 @@ export class ControlPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.updatePosition();
+  }
+
+  clear() {
+    // Set workstation to default state (empty slots)
+  }
+
+  updatePosition(){
+    
   }
 
 }

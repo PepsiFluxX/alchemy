@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ingredient } from '../ingredient';
 
 @Component({
   selector: 'app-mixing-table',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MixingTableComponent implements OnInit {
 
+  ingredient_storage = new Array<Ingredient>(4);
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

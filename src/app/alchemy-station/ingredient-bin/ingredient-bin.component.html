@@ -1,1 +1,23 @@
-<p>ingredient-bin works!</p>
+<div 
+    cdkDropList
+    #masterBin="cdkDropList"
+    [cdkDropListConnectedTo]="[box1]"
+    [cdkDropListData]="things"
+    (cdkDropListDropped)="drop($event)"
+    class="drag-container"
+    >    
+        <div cdkDrag *ngFor="let thing of things">{{thing}}</div>
+</div>
+
+<div cdkDropList
+    #box1="cdkDropList"
+    [cdkDropListConnectedTo]="[masterBin]"
+    [cdkDropListData]="stuff"
+    (cdkDropListDropped)="drop($event)"
+    
+    >
+        <div 
+        cdkDrag
+        *ngFor="let dong of stuff"
+        >{{dong}}</div>
+</div>

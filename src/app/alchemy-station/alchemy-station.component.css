@@ -1,0 +1,33 @@
+:host{
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+}
+
+.flex1{
+    
+    display: flex;
+    flex: 0 0 20%;
+    
+}
+
+.flex2{
+    display: flex;
+    flex: 0 0 80%;
+    flex-direction: column;
+}
+
+.ingredient-bin{
+    
+    flex: 0 0 100%; 
+}
+
+.mixing-table{
+    display: flex;
+    flex: 0 0 80%;
+}
+
+.control-panel{
+    flex: 0 0 20%;
+    
+}

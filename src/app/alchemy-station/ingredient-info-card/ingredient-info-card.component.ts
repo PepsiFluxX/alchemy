@@ -1,31 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Ingredient } from '../ingredient';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
 @Component({
-  selector: 'app-ingredient-bin',
-  templateUrl: './ingredient-bin.component.html',
-  styleUrls: ['./ingredient-bin.component.css']
+  selector: 'app-ingredient-info-card',
+  templateUrl: './ingredient-info-card.component.html',
+  styleUrls: ['./ingredient-info-card.component.css']
 })
-export class IngredientBinComponent implements OnInit {
+export class IngredientInfoCardComponent implements OnInit {
 
-  things = [
-    'item1',
-    'item2',
-    'item3'
-  ];
-
-  stuff = [
-    'item4',
-    'item5',
-    'item6'
-  ];
-
+  @Input() myIngredient: Ingredient;
   constructor() { }
 
   ngOnInit(): void {
   }
-
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
@@ -37,4 +26,5 @@ export class IngredientBinComponent implements OnInit {
                       event.currentIndex);
     }
   }
+
 }

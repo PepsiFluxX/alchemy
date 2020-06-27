@@ -1,0 +1,16 @@
+:host{
+    border: 3px dashed rgb(102,102,102);
+    border-radius: 15px;
+    background-color: rgb(235, 228, 228);
+
+    display: flex;
+    flex-basis: 100%;
+}
+
+.centered-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis: 100%;
+}

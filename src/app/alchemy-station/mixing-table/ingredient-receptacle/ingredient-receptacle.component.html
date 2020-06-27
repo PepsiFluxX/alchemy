@@ -1,0 +1,9 @@
+<div *ngIf="state === 'empty'" class="centered-text">Place Ingredient Here</div>
+
+
+<app-ingredient-info-card *ngIf="state === 'detailed'" [myIngredient]=myIngredient></app-ingredient-info-card>
+
+
+<div *ngIf="state === 'thumbnail'">
+
+</div>
